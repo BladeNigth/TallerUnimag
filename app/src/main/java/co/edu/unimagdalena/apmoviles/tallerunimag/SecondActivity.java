@@ -34,6 +34,8 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         int num1 = Integer.parseInt( n1.getText().toString());
         int num2 = Integer.parseInt( n2.getText().toString());
+        float num3 = Integer.parseInt(n1.getText().toString());
+        float num4 = Integer.parseInt(n2.getText().toString());
         switch (view.getId()){
             case R.id.btnsumar:
 
@@ -47,10 +49,10 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                 Toast.makeText(this,"Multiplicacion = " + (num1 * num2),Toast.LENGTH_LONG).show();
                 break;
             case R.id.btnDividir:
-                if(num2 == 0){
+                if(num4 == 0){
                     Toast.makeText(getApplicationContext(), "Datos invalidos", Toast.LENGTH_LONG).show();
                 }else{
-                    Toast.makeText(this,"Divicion = " +(num1 / num2),Toast.LENGTH_LONG).show();
+                    Toast.makeText(this,"Divicion = " + (num3 / num4),Toast.LENGTH_LONG).show();
                 }
                 break;
             case R.id.btnmayor:
@@ -59,7 +61,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                 }else if(num2 > num1){
                     Toast.makeText(this,"el Mayor es = "+ num2,Toast.LENGTH_LONG).show();
                 }else if(num1 == num2 ){
-                    Toast.makeText(this,"son Iguales "+ num1,Toast.LENGTH_LONG).show();
+                    Toast.makeText(this,"son Iguales ",Toast.LENGTH_LONG).show();
                 }
 
         }
