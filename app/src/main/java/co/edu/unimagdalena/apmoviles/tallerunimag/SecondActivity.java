@@ -24,6 +24,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         suma.setOnClickListener(this);
         resta.setOnClickListener(this);
         multi.setOnClickListener(this);
+        div.setOnClickListener(this);
 
     }
 
@@ -41,7 +42,16 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                 Toast.makeText(this, "Resta = " + (num1 - num2),Toast.LENGTH_LONG).show();
                 break;
             case R.id.btnmultiplicar:
-                Toast.makeText(this,"Multiplicacion = "+ (num1 * num2),Toast.LENGTH_LONG).show();
+                Toast.makeText(this,"Multiplicacion = " + (num1 * num2),Toast.LENGTH_LONG).show();
+                break;
+            case R.id.btnDividir:
+
+                if(num2 == 0){
+                    Toast.makeText(getApplicationContext(), "Datos invalidos", Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(this,"Divicion = " +(num1 / num2),Toast.LENGTH_LONG).show();
+                }
+
         }
     }
 }
