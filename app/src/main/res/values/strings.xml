@@ -13,4 +13,5 @@
     <string name="sumar">Sumar</string>
     <string name="multiplicar">Multiplicar</string>
     <string name="dividir">Dividir</string>
+    <string name="mayor">Mayor</string>
 </resources>
