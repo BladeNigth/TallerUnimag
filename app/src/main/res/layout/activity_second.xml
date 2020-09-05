@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".SecondActivity">
 
@@ -26,7 +27,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="750dp"
         android:layout_weight="0.5"
         android:orientation="vertical">
 
@@ -72,6 +73,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/restar"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnmultiplicar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/multiplicar"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnDividir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dividir"
             android:textSize="18sp" />
 
     </LinearLayout>
