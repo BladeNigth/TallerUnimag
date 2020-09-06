@@ -51,27 +51,27 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
             switch (view.getId()) {
                 case R.id.btnsumar:
 
-                    Toast.makeText(this, "Suma = " + (num1 + num2), Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Suma: " + (num1 + num2), Toast.LENGTH_LONG).show();
                     break;
 
                 case R.id.btnrestar:
-                    Toast.makeText(this, "Resta = " + (num1 - num2), Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Resta: " + (num1 - num2), Toast.LENGTH_LONG).show();
                     break;
                 case R.id.btnmultiplicar:
-                    Toast.makeText(this, "Multiplicacion = " + (num1 * num2), Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Multiplicacion: " + (num1 * num2), Toast.LENGTH_LONG).show();
                     break;
                 case R.id.btnDividir:
                     if (num4 == 0) {
                         Toast.makeText(getApplicationContext(), "Datos invalidos", Toast.LENGTH_LONG).show();
                     } else {
-                        Toast.makeText(this, "Divicion = " + (num3 / num4), Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "Division: " + (num3 / num4), Toast.LENGTH_LONG).show();
                     }
                     break;
                 case R.id.btnmayor:
                     if (num1 > num2) {
-                        Toast.makeText(this, "el Mayor es = " + num1, Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "el Mayor es: " + num1, Toast.LENGTH_LONG).show();
                     } else if (num2 > num1) {
-                        Toast.makeText(this, "el Mayor es = " + num2, Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "el Mayor es: " + num2, Toast.LENGTH_LONG).show();
                     } else if (num1 == num2) {
                         Toast.makeText(this, "son Iguales ", Toast.LENGTH_LONG).show();
                     }
@@ -87,7 +87,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                         } else
                             i = i + 1;
                     }
-                    Toast.makeText(this, "mcm es:  " + mcm, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, " MCM es:  " + mcm, Toast.LENGTH_LONG).show();
                     break;
                 case R.id.btnmcd:
                     int mcd = 0;

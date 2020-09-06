@@ -35,5 +35,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                usuario.setText("");
+                usuario.invalidate();
+                clave.setText("");
+                clave.invalidate();
+            }
+        });
     }
 }
