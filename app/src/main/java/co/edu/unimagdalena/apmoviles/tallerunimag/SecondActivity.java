@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
     EditText n1,n2;
-    Button suma,resta,multi,div, mayor;
+    Button suma,resta,multi,div, mayor,mcm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,11 +22,13 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         multi = findViewById(R.id.btnmultiplicar);
         div  = findViewById(R.id.btnDividir);
         mayor = findViewById(R.id.btnmayor);
+        mcm = findViewById(R.id.btnmcm);
         suma.setOnClickListener(this);
         resta.setOnClickListener(this);
         multi.setOnClickListener(this);
         div.setOnClickListener(this);
         mayor.setOnClickListener(this);
+        mcm.setOnClickListener(this);
 
     }
 
@@ -63,6 +65,23 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                 }else if(num1 == num2 ){
                     Toast.makeText(this,"son Iguales ",Toast.LENGTH_LONG).show();
                 }
+                break;
+            case R.id.btnmcm:
+                int mcm = 1;
+                int i=2;
+                while(i <= num1 || i <= num2)
+                {
+                    if(num1%i==0 || num2%i==0)
+                    {
+                        mcm=mcm*i;
+                        if(num1%i==0) num1=num1/i;
+                        if(num2%i==0) num2=num2/i;
+                    }
+                    else
+                        i=i+1;
+                }
+                Toast.makeText(this,"mcm es:  " + mcm,Toast.LENGTH_LONG).show();
+                break;
 
         }
     }

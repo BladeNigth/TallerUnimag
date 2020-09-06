@@ -14,4 +14,6 @@
     <string name="multiplicar">Multiplicar</string>
     <string name="dividir">Dividir</string>
     <string name="mayor">Mayor</string>
+    <string name="mcm">MCM</string>
+    <string name="mcd">MCD</string>
 </resources>
