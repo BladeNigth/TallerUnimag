@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
     EditText n1,n2;
-    Button suma,resta,multi,div, mayor,mcm;
+    Button suma,resta,multi,div, mayor,mcm,mcd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,12 +23,14 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         div  = findViewById(R.id.btnDividir);
         mayor = findViewById(R.id.btnmayor);
         mcm = findViewById(R.id.btnmcm);
+        mcd = findViewById(R.id.btnmcd);
         suma.setOnClickListener(this);
         resta.setOnClickListener(this);
         multi.setOnClickListener(this);
         div.setOnClickListener(this);
         mayor.setOnClickListener(this);
         mcm.setOnClickListener(this);
+        mcd.setOnClickListener(this);
 
     }
 
@@ -81,6 +83,17 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                         i=i+1;
                 }
                 Toast.makeText(this,"mcm es:  " + mcm,Toast.LENGTH_LONG).show();
+                break;
+            case R.id.btnmcd:
+                int mcd = 0;
+                int a = Math.max(num1,num2);
+                int b = Math.min(num1,num2);
+                do{
+                    mcd = b;
+                    b = a%b;
+                    a = mcd;
+                }while(b!=0);
+                Toast.makeText(this,"MCD es: "+mcd,Toast.LENGTH_LONG).show();
                 break;
 
         }
